@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>RAKSHITH S | Portfolio</title>
+
+    <style>
+
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: #111827;
+
+            padding: 18px 5%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul a {
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul a:hover {
+            color: #60a5fa;
+        }
+
+
+
+        .hero {
+            min-height: 90vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dbeafe,
+                    #f8fafc
+                );
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+            color: #334155;
+        }
+
+        .hero p {
+            color: #64748b;
+            font-size: 18px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .buttons {
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 12px 25px;
+            margin: 5px;
+
+            border-radius: 8px;
+
+            background: #2563eb;
+            color: white;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
+        .btn-outline:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 45px;
+        }
+
+
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #64748b;
+        }
+
+
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-top: 30px;
+        }
+
+        .skill {
+            background: white;
+
+            padding: 12px 22px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.08);
+
+            font-weight: bold;
+        }
+
+
+        .projects {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(280px, 1fr)
+                );
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .project-links a {
+            color: #2563eb;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+
+
+        .education {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .education-card {
+            background: white;
+
+            padding: 25px;
+
+            margin-bottom: 20px;
+
+            border-left:
+                5px solid #2563eb;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.07);
+        }
+
+        .education-card h3 {
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: #64748b;
+        }
+
+
+
+        .resume {
+            text-align: center;
+
+            background: #eff6ff;
+        }
+
+        .resume p {
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-info {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(220px, 1fr)
+                );
+
+            gap: 20px;
+
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+        .contact-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-card .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .contact-card h3 {
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        .contact-card a {
+            color: #475569;
+            word-break: break-word;
+        }
+
+        .final-check {
+            text-align: center;
+
+            background: #ecfdf5;
+
+            padding: 40px 20px;
+        }
+
+        .final-check h2 {
+            color: #047857;
+            margin-bottom: 10px;
+        }
+
+        .final-check p {
+            color: #475569;
+        }
+
+
+        footer {
+            background: #111827;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h3 {
+                font-size: 21px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .container {
+                width: 92%;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <nav>
+
+        <h2>MyPortfolio</h2>
+
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <h1>
+                Hello, I'm
+                <span>RAKSHITH S</span>
+            </h1>
+
+            <h3>
+                Student | Web Developer LEARNER
+            </h3>
+
+            <p>
+                Welcome to my personal portfolio.
+                I enjoy building websites, learning
+                programming and creating useful projects.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects"
+                   class="btn">
+                    View Projects
+                </a>
+
+                <a href="resume.pdf"
+                   class="btn btn-outline"
+                   download>
+                    Download Resume
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <div class="about">
+
+                <p>
+                    I am a passionate student interested in
+                    web development, programming. I enjoy solving problems,
+                    developing projects and continuously
+                    improving my technical skills.
+                </p>
+
+
+                <div class="skills">
+
+                    <div class="skill">HTML</div>
+
+                    <div class="skill">CSS</div>
+
+                    <div class="skill">JavaScript</div>
+
+                    <div class="skill">Python</div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+ 
+    <section id="projects">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My Projects
+            </h2>
+
+            <div class="projects">
+
+
+                <div class="project-card">
+
+                    <h3>
+                        Portfolio Website
+                    </h3>
+
+                    <p>
+                        A responsive personal portfolio
+                        website developed using HTML,
+                        CSS and JavaScript.
+                    </p>
+
+                    <div class="project-links">
+
+                        <a href="https://github.com/siddotom-Rakshith-s"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub
+                        </a>
+
+                        <a href="#"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Live Demo
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>
+                        Student Management System
+                    </h3>
+
+                    <p>
+                        A simple system for managing
+                        student information and records.
+                    </p>
+
+                    <div class="project-links">
+
+                        <a href="https://github.com/siddotom-Rakshith-s/student-management"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub
+                        </a>
+
+                        <a href="#"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Live Demo
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>
+                        Python Mini Project
+                    </h3>
+
+                    <p>
+                        A Python project demonstrating
+                        programming concepts, functions,
+                        conditions and data handling.
+                    </p>
+
+                    <div class="project-links">
+
+                        <a href="https://github.com/siddotom-Rakshith-s/python-project"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub
+                        </a>
+
+                        <a href="#"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Live Demo
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="education">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Education
+            </h2>
+
+            <div class="education">
+
+
+                <div class="education-card">
+
+                    <h3>
+                        Bachelor's Degree Student
+                    </h3>
+
+                    <p>
+                        <strong>
+                            AMITY University BANGALORE
+                        </strong>
+                    </p>
+
+                    <p>
+                        2025 - 202
+                    </p>
+
+                    <p>
+                        Computer Science Engineering Dev Ops
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <h3>
+                        Higher Secondary Education
+                    </h3>
+
+                    <p>
+                        <strong>
+                            Gnana Bharathi Public School
+                        </strong>
+                    </p>
+
+                    <p>
+                        2023
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="resume">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My Resume
+            </h2>
+
+            <p>
+                Download my resume to learn more about
+                my education, skills and experience.
+            </p>
+
+            <a href="resume.pdf"
+               class="btn"
+               download>
+                Download Resume
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Contact Me
+            </h2>
+
+            <div class="contact-info">
+
+
+               
+                <div class="contact-card">
+
+                    <div class="icon">
+                        📧
+                    </div>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <a href="mailto:sidrakshith.42s@gmail.com">
+                        sidrakshith.42s@gmail.com
+                    </a>
+
+                </div>
+
+
+                <!-- GITHUB -->
+
+                <div class="contact-card">
+
+                    <div class="icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        GitHub
+                    </h3>
+
+                    <a href="https://github.com/siddotom-Rakshith-s"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        github.com/siddotom-Rakshith-s
+                    </a>
+
+                </div>
+
+
+                <!-- LINKEDIN -->
+
+                <div class="contact-card">
+
+                    <div class="icon">
+                        🔗
+                    </div>
+
+                    <h3>
+                        LinkedIn
+                    </h3>
+
+                    <a href="https://www.linkedin.com/in/rakshith-s-12692b39b"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        LinkedIn Profile
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="final-check">
+
+        <h2>
+            ✓ Portfolio Completed
+        </h2>
+
+        <p>
+            Website is responsive, optimized and
+            ready for final submission.
+        </p>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © <span id="year"></span>
+            RAKSHITH S.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script>
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+
+</body>
+</html>
